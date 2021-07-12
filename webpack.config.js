@@ -6,5 +6,16 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
     },
-    mode: "production"
+    mode: "production",
+
+    optimization: {
+        usedExports: true,
+        minimize: true
+    },
+    module: {
+        rules: [{
+            sideEffects: true,
+
+        }]
+    }
 };
